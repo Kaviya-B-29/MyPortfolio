@@ -13,7 +13,7 @@ export function Skills() {
     
     {
       category: 'Tools & Others',
-      skills: ['Git', 'Github','Render', 'Netlify','Postman','MongoDB Compass, Atlas','Vscode'],
+      skills: ['Git', 'Github','Render', 'Netlify','Postman','MongoDB Compass, Atlas','Vscode', ],
     },
   ];
 

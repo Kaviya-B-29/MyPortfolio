@@ -1,6 +1,6 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
 const cors = require('cors');
+const { Resend } = require('resend');
 require('dotenv').config();
 
 const app = express();
@@ -9,14 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ===== Nodemailer Transporter =====
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+// ===== Resend Client =====
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // ===== Test route (optional) =====
 app.get('/', (req, res) => {
@@ -33,9 +27,9 @@ app.post('/api/contact', async (req, res) => {
   }
 
   try {
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
+    await resend.emails.send({
+      from: process.env.FROM_EMAIL, // e.g. onboarding@resend.dev
+      to: [process.env.TO_EMAIL],   // YOUR email
       replyTo: email,
       subject: `New message from ${name}`,
       text: `

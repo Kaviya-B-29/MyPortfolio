@@ -9,7 +9,7 @@ export function Projects() {
     {
       title: 'Health And Wellness App',
       description: 'A Full-stack health and wellness platform enabling users to track fitness activities, log nutrition and habits, and maintain structured mental health records with secure authentication and insightful progress visualization..',
-      image: '/health.avif',
+      image: '/health1.jpg',
       tags: ['React.js','Node.js','Express.js', 'MongoDB','TailwindCSS','HTML'],
       github: 'https://github.com/Kaviya-B-29/HealthAndWellnessFrontEnd',
       demo: 'https://healthwellnessfront.netlify.app/',
@@ -23,9 +23,9 @@ export function Projects() {
       demo: 'https://expensetrackerfrontend1.netlify.app/',
     },
     {
-      title: 'Movie Browsing and Watchlisting App',
+      title: 'Movie Browsing App',
       description: 'A comprehensive movie catalog and watchlist application integrating the OMDb API for seamless search, paginated browsing, detailed views, and persistent management of personal favorites and watchlists.',
-      image:'movie.webp',
+      image:'movie 2.webp',
       tags: ['React.js','Node.js','Express.js', 'MongoDB','TailwindCSS','HTML'],
       github: 'https://github.com/Kaviya-B-29/MovieCatalogFrontend',
       demo: 'https://moviecatalogfront.netlify.app/',
