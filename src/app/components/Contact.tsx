@@ -95,7 +95,7 @@ export function Contact() {
               </a>
 
               <a
-                href="/B.Kaviya_Resume.pdf"
+                href="/B.Kaviya-Resume.pdf"
                 download
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg
                           border border-purple-500 text-purple-300 hover:bg-purple-800/30 transition-colors"
