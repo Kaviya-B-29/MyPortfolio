@@ -32,7 +32,7 @@ export function Navigation() {
         isScrolled ? 'bg-slate-950/80 backdrop-blur-md shadow-lg shadow-purple-500/10 py-4' : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-6xl mx-auto  flex items-center justify-between">
+      <div className="max-w-6xl mx-auto text-3xl  flex items-center justify-between">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="text-purple-400 hover:text-purple-300 transition-colors"
