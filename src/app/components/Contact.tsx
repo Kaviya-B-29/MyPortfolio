@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Send, PhoneCallIcon } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Send, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -65,6 +65,7 @@ export function Contact() {
             </p>
             <div className="space-y-4">
               {socialLinks.map((link, index) => {
+                 
                 const Icon = link.icon;
                 return (
                   <a
@@ -77,8 +78,34 @@ export function Contact() {
                     <Icon className="w-5 h-5" />
                     <span>{link.label}</span>
                   </a>
+                  
                 );
+               
+
               })}
+             <div className="flex gap-4 mt-2">
+              <a
+                href="/Kaviya_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg
+                          bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+              >
+                View Resume
+              </a>
+
+              <a
+                href="/Kaviya_Resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg
+                          border border-purple-500 text-purple-300 hover:bg-purple-800/30 transition-colors"
+              >
+                    <Download className="w-5 h-5" />
+
+                Download PDF
+              </a>
+            </div>
+
             </div>
           </div>
           <Card className="bg-slate-900/80 backdrop-blur-sm border-purple-600/30">
